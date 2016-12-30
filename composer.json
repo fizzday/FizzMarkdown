@@ -1,0 +1,19 @@
+{
+    "name": "fizzday/fizzmarkdown",
+    "description": "a markdown parser with php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "fizz",
+            "email": "864759073@qq.com"
+        }
+    ],
+    "require": { },
+    "require-dev": { },
+    "autoload": {
+        "psr-4": {
+            "Fizzday\\FizzMarkdown\\": "src/"
+        }
+    },
+    "license": "MIT"
+}
