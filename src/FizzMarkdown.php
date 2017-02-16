@@ -56,7 +56,7 @@ class FizzMarkdown
      * @param int $startNo      开始序号
      * @return string
      */
-    public static function multiParse($mdDir='',$htmlDir='',$startNo=1)
+    public static function multiParse($mdDir='./md',$htmlDir='./html',$startNo=11)
     {
         // 编码转换为utf-8
         $md_dir = iconv("gb2312","utf-8",$mdDir);
@@ -74,9 +74,10 @@ class FizzMarkdown
                     $filename = $i;
                     if ($i < 10) {
                         $filename = '0'.$i;
-                    } elseif ($i < 100) {
-                        $filename = '00'.$i;
-                    }
+                    } 
+//                    elseif ($i < 100) {
+//                        $filename = '00'.$i;
+//                    }
                     $html = self::handle(file_get_contents($v));
 
                     $file = rtrim($htmlDir, '/').'/'.$filename.'.html';
